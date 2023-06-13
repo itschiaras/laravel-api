@@ -16,18 +16,7 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
-        $projects = [
-            [
-                "title" => "Sito Web E-commerce",
-                "description" => "Sviluppo di un sito web di e-commerce con funzionalità di acquisto, gestione del carrello e pagamento online.",
-                "image" => "https://www.rivoluzionecreativa.com/wp-content/uploads/2019/08/sito-web-e-commerce.jpg"
-            ],
-            [
-                "title" => "Applicazione di Gestione delle Attività",
-                "description" => "Creazione di un'applicazione web per la gestione delle attività quotidiane, inclusa la pianificazione, il tracciamento del tempo e la collaborazione.",
-                "image" => "https://th.bing.com/th/id/OIP.gAY4bMgu6yaTY0h1Pjnu5QHaEK?pid=ImgDet&rs=1"
-            ]
-        ];
+        $projects = config('projects');
 
         foreach ($projects as $project) {
             $newProject = new Project();
